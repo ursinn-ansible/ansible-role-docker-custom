@@ -15,7 +15,7 @@
     name: "docker"
     state: "{{ docker_restart_handler_state }}"
 
- - name: Create group
+- name: Create group
    ansible.builtin.group:
     name: docker_files
     state: present
