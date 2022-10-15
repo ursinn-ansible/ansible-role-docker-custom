@@ -27,3 +27,9 @@
     name: docker_files
     shell: /sbin/nologin
     state: present
+
+- name: Create app network
+  community.docker.docker_network:
+    name: app-network
+    driver_options:
+          com.docker.network.bridge.name: br-app-network
