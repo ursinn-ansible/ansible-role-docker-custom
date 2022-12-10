@@ -9,11 +9,7 @@
   community.docker.docker_plugin: 
     plugin_name: grafana/loki-docker-driver
     state: enable
-
-- name: Restart docker
-  ansible.builtin.service:
-    name: "docker"
-    state: "{{ docker_restart_handler_state }}"
+  notify: restart docker
 
 - name: Create group
   ansible.builtin.group:
