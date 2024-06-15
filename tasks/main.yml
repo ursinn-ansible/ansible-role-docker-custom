@@ -12,12 +12,6 @@
     shell: /sbin/nologin
     state: present
 
-- name: Create app network
-  community.docker.docker_network:
-    name: "{{ docker_custom_network }}"
-    driver_options:
-          com.docker.network.bridge.name: "br-{{ docker_custom_network }}"
-
 - name: adding user Debian-snmp to group docker
   user:
     name: Debian-snmp

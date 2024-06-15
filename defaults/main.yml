@@ -1,5 +1,4 @@
 ---
-docker_custom_network: app-network
 docker_custom_user: docker_files
 docker_custom_group: docker_files
 
